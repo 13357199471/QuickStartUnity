@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{C599B9CA-1531-3E8F-12C6-5CC74B8B5269}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Editor/XCodePostProcess.cs">
+    <Files>
+      <File FileName="Assets/Editor/XCodePostProcess.cs" Line="1" Column="1" />
+      <File FileName="Assets/Demo/Scripts/EngineManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/RTCVideo/Implement/RTCVideo.cs" />
+      <File FileName="Assets/RTCVideo/Implement/RTCVideoEngineCXXBridge.cs" />
+      <File FileName="Assets/Editor/CommandBuild.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="QuickStartUnity" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Demo" expanded="True">
+                <Node name="Scripts" expanded="True" />
+              </Node>
+              <Node name="Editor" expanded="True">
+                <Node name="XCodePostProcess.cs" selected="True" />
+              </Node>
+              <Node name="RTCVideo" expanded="True">
+                <Node name="Implement" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.QuickStartUnity PreferredExecutionTarget="1cc2630e-1e40-4d97-ac19-cde89f01a84f" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="acb44e6e-41b7-4786-b160-e371a2962175" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+
+dependencies {
+    implementation project(':unityLibrary')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.61'
+    }
+
+android {
+    compileSdkVersion **APIVERSION**
+    buildToolsVersion '**BUILDTOOLS**'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion **MINSDKVERSION**
+        targetSdkVersion **TARGETSDKVERSION**
+        applicationId '**APPLICATIONID**'
+        ndk {
+            abiFilters **ABIFILTERS**
+        }
+        versionCode **VERSIONCODE**
+        versionName '**VERSIONNAME**'
+    }
+
+    aaptOptions {
+        noCompress = **BUILTIN_NOCOMPRESS** + unityStreamingAssets.tokenize(', ')
+        ignoreAssetsPattern = "!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~"
+    }**SIGN**
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions
+    {
+        pickFirst "lib/*/libc++_shared.so"
+
+        pickFirst "lib/*/libbmf_hydra.so"
+        pickFirst "lib/*/libbmf_mods.so"
+        pickFirst "lib/*/libbytenn.so"
+        pickFirst "lib/*/libbytertc_ffmpeg_audio_extension.so"
+        pickFirst "lib/*/libbytertc_nico_extension.so"
+        pickFirst "lib/*/libbytertc_videodenoise_extension.so"
+        pickFirst "lib/*/libbytertc_videosharpen_extension.so"
+        pickFirst "lib/*/libbytertc_videosr_extension.so"
+        pickFirst "lib/*/libh265enc.so"
+        pickFirst "lib/*/libbdaudioeffect.so"
+
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled **MINIFY_DEBUG**
+            proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+            jniDebuggable true
+        }
+        release {
+            minifyEnabled **MINIFY_RELEASE**
+            proguardFiles getDefaultProguardFile('proguard-android.txt')**SIGNCONFIG**
+        }
+    }**PACKAGING_OPTIONS****PLAY_ASSET_PACKS****SPLITS**
+**BUILT_APK_LOCATION**
+    bundle {
+        language {
+            enableSplit = false
+        }
+        density {
+            enableSplit = false
+        }
+        abi {
+            enableSplit = true
+        }
+    }
+}**SPLITS_VERSION_CODE****LAUNCHER_SOURCE_BUILD_SETUP**
